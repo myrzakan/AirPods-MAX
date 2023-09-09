@@ -221,12 +221,24 @@ ul {
 /* ? ======================================= Section 4 =================================== */
 
 .audio {
+  position: relative;
+}
+
+.audio::before {
+  content: '';
   background-image: url(./img/audio-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   z-index: -2;
+
 }
 
 .audio::after {
@@ -276,7 +288,32 @@ ul {
 /* ? ======================================= Footer ====================================== */
 
 .footer {
+  position: relative;
+  z-index: -2;
   padding: 250px 0 40px;
   background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
 }
 
+.footer__text {
+  padding: 20px 0;
+}
+
+.footer__link {
+  padding-top: 50px;
+}
+
+.footer__list {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 30px;
+  z-index: 3;
+}
+
+.footer__list p {
+  cursor: pointer;
+}
